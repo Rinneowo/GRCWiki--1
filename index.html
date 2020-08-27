@@ -1,0 +1,465 @@
+﻿<!--
+        ;:;i;i;;r;r;;;iii:i:i::ir;r;;i;;;;;;;iiirr;i;iiiiii::.,,:,,,,.,.,,:.:,,,,,,.,,,:,.,,,,,,,,,,,,:,,,,,:,,,:,,,,,,.
+        ;.:,,:,:,,,:::.,,. ....:iiii:::i:i:i:,.,,:,:,:,:,,.,                                                            
+        ;:;i;i;ii:i:iiiii:ii;ii;7r;;;;r;r;;ii;r;7;i:iii:i:i:,,,.,,,,,,,.,.,.,.,.,,,.,,,.,.,,,.,.,,,...,.......,,:.,.,,,.
+        i:i;i;ii:iiiii:i:iirii:;ri:::iii::,:::ir7Xri:i:i:i:::,.,.,.,.,.,.,...,...,.,.,.,.,.,.,.:.,.... . ... . ,.,,,.,.,
+        i:iiiiiiii;i;:iiii;r;:iii,,:i,:,....::;rXX2r::i:i:i,,.,...,.,.,.,.,.,.....,.,.....,...,.,.. ..:,iirr7:  .,,.....
+        i:iii;iii;i;iii;i;rri:::,:,i::.,.,.,:ii;7SSXi:::i:,:...,.,.,.,.,...,.,.,.....,.....,.,...,  ,r7Xr7XS22;  ..,.,..
+        ;:iii;;;;i;i;i;;;;;ii,:,:,:::.,.....::i;77XXSi:::::.,.,.,.,.,.,.,...,...,.,.,...,.,.,.... .:;rSSSXSX2Za: .,.,...
+        ;ii;i;;r;;;;iiiiiii:,,::,:::.,.,...,,iir7SXSSX;:,i,,.,.,...,.,...,.....,.,...,...,.,.... ,i;;X7X7XSZZZZX ....,..
+        ri;i;i;ii::::,:,,,,.,,,,,.,.,.,.,,,,:i;;XXXXXXXi:,,.,...,.,.,...,.....,...,...,...,..  .i;77X77r7XaZa2Z2i ....,.
+        i:::,:,:,,...,.......,...,...,..,,,::i:;7SXX7X7X;,...,.,.,.,.,.,.,.....,.,.....,.... ,:i;7XX7rr7rXXSSaaZ7  ,.,..
+        : :...,.,.,.....::::::,,,.....,.,,,:i;;;XX2SXX7XX;, . ........,.,.,.,.,.,...,.,.... :iiiXXX777XXX7XXaaaZa, .,.,.
+        . ...,...,..,,,::i::::,,,,...,,,..,:i;irr7X222XSXXX;,. .   . ......... ..,......  ,rrr72S7r7XSSSXSSSSS2aa; ..,..
+        , ,......,,,:,:,,...,.,,:,i:;i;i:,ii;r77X777X7XrXXX77;iii,,..   . .       . .   ,iX77XZZ7rXXSS22aS2SXXS2Zr  ....
+        . ...,,:,:,:::,,,::i:ii;r7r77X7X77;irSaa7;;i:iiiiii;;r777X77rr;;;;;rr;ii:i,,,:.:;X7r7Za77XXSXSX2a222XXXSZX  .,..
+        : :.:::iiiii;;;;7XX777XXSXXXXXX7XX;i7XX;ii;:iiii;;;;;;r;rr7r7rrr7r77X7X77rX7r;7r7rXXZZX7XXSS2S22a2aa2XXXZX  .,..
+        ::ii;;;r;r77XXXSSSSSXSXXXXXX7X777r;rii::iii;iii;;r;r;rrr;;;;;;;;i;;r;;;7rrrSaS7Xr7SZ8S7XSaZ0888008ZaXXXaZX ..,..
+        7;77XXXXSX2XSXSXXXXXX7X7X777X77rrii::::i;i;i;;r;rrrr777r7rr;r;;i;;iii:;rrr;7ZaXrXZ8Za77722ZZ0BWBB8aXXXS2Zr .,...
+        SSS2XSSSXXXXXX7X7X777777777Xr7;i:::i:i:i:ii;;;;rr77Xrr777rrr;;;;;;i;i;;rr7rr;SZ8ZZZ277rX77X2ZBBB08SX7SSSa; .,,..
+        SXSXXXXXX777777r7777X7X77rr;i:,,::i:i::iiiii;;rr7rXXX77rrrr;r;;;rrrrrrrr7;;;;iXZ0ZaXX7X777SaBWW08aSXXXXX2i..,...
+        X7XX7X7X777777777X77;;ii:,::,:,::iii,:,,:::;;;r77XXXrr;rr7r777;7;7rrrr;r;rrrr;irXaaZaSXX7SZ@@W008a77XXX27. .....
+        X7X7X7X7X77r7r7777ri:.,,:,::::iiiii:,.::,,:i;ir7XXX;;r7r7r7rrrr;r77;rr;irrr;rrri:raaSXX7aWM@BBB8aXr77XSS: ..,...
+        X77X7X7777r7r7r7r;:,.,,::i:::ii;;;:,,:,:,:,i;rrXXXrrr7rrr7rrrrrr;rrrr7r7r;rr;rr;ii;SSXXWMM@WBBZ27r;rrXSr  ...,..
+        XrX7X7777r7r7r7ri,.,::i,:,::ii;ii:::i::::::ir;7XX;rr7rr;;iiii;r;;r7;rrr;r;;;;r7;;iiirX8W8BM0ZaX7XX7XZ8Zr....,...
+        X77777rrr7r7rr;i,,,::i::,,:ii:...,ii:i::iiirrr7Xrr77r;ii:i::i;ir;7rrr7r7;;r;;;;r;r;;:;r77Z0a77XXXXZM0SX7,,.,....
+        Xr7r7r7r7r7rr;i:::iiiii::,:...... ;;;:::iirr7XXXXXXr;i::iiiii:ii;r7XX77r7;;rr;;;r;;i;ii;rrXXS777r;SXiiXri,:.....
+        7r77r7rr;;;;ii:,:i:i:i:i::,XWMMMMZr;;::iirrXrX7XXXr;i:::iii;:iiii;;7777Xrrrr;;;r;;iiiiiiii;7XSXSXXXSSSXXii,,,,..
+        ri;;iii:i:i::::,i:,...,::,X@020MM@0Xi,i;7rrr7r7777rii:i:ii;::,i:;iiirrXrr;7rr;7rr;;;;iiii:iirXSXXX2ZZaaX;ii::.,.
+        :,::::,:,,,:,:::,,     ..iX;ZZaWaXM8:i;r;rii;7r;i;;;iiii:ii,.:,,,ii;i;rXXXr7rr;r;r;;;;i;ii:iir7XXX2aaaSXrr;i,,..
+        :.:,:,,,,,:,,:::.     .  X;iMBB@MM@Xi;;ii::i;i;:i;;;i:iii,:XBWBa7i::ri;;77r;rrr;;;ri;;riii;iii;rX728B8ZX7r;i:,,.
+        ,,::,,,:,:,::i:,     .,.,2SrB0ZWMMXiiiii::irii::iri;;;iiiSMMBBMMMMBX:rr;;7;rr;r;;;;;;;rr;rrii;;;;77280ZS7r;;::..
+        i.:,:,,,:,,,:,,   . ..:,,;2aBMW0a:.,ii;iii;i::iirr7r7rSZMM0  .:0@MMM0777rrr;r;;;;i;;r;r;;;;;;;;;r;7XSaaSXrr;i,, 
+        :.,:,:::,:::::   .. .,iiiii7XS;, .,ii;ii:i::,ii;;XXSSZWMM2  0M@MBBWMMMaS7rr;i;;ri;i;;;;;;;i;;r;;rr;7SaSX77rri:..
+        :.:,:,:::,:::.  .   .,;;;i;::...:i;ii::,:,::i:ii;rSaaBMMM:.SMMMMMWMW@BX;7;rrr;r;;i;;;;r;rr;i;;;;;;r;XX7r7rr;i.. 
+        :.::,:,:::::.  ... ..:irii::.::iii::,::i:iiii;;ii;7Xr2@MMWX2W@WMMMBZX::iiiii:iiii;;;iiiii;;;;;;;;r;rr7rr77rri:..
+        :.:::,:,,,i..  .....,,::i...:,:::,::::i:::i,::;i;r77ri7S8@Wa0B888aXi..:ii:i,:,::i:iii:i:ii;i::;;;i;;rr7r777rr:, 
+        :,:::i::,:,.., . ..,       ,,:,,,i:iii:i:iii:;i;irr7ri,:,i;77r;;,..:iiii:i::,,,:,:,::i::,::::i;;;;;r;rrr;777;:..
+        :,i:iii::,, .,:   .    .i;7rr;i::i;iii:::,:iii;i;i;rriii;ii:iii:::;r;iiii::,,,,:::ii;ii:i:i::iiiiii;;;rrr;r;r:: 
+        ::i;ii::,,  . .:,.  :XSaZZSS2aaZ2X;,,:i;:,ii:i:iiiir;iiii;rr;;;r;r;;;;:i::::::,::;rr;i:::iii:i:i:iiiir;r;;;r;;:.
+        i,;i;;;ii:,...,..  ZMMM@M@@WBZBBBB02i,,,::i,:iiiii;i;ii:ii;i;r7r;i;;;ii:i::,:,:,:,iii:::::i:i:i:i:;;;;;;r;;i;;;,
+        i::ii;i;::.:::..  :MMMM@@MMMMMMMMMWM@7.,,,,..,:iiii;i;::::,:,:ii:i:;:iiiii::,:,,...,.::::i,::i:iiiiii;;r;;ii;r;:
+        S;;i;;r;:.::;i:   .2MMMB@@@MMMMWW@WWWX,.,.::i:::i:iii:iii::,,,,.::ii;iiii:i::,:,,,:,:::::,::::iiiiiiii;rri;i;;;i
+        27r;i;ii.  ..,.. .;XX0BWWW@@MMMM@MMMZX,:::,i::,i:::ii::i:,:::i:,.:::::,i::,::::::::i:i:::i:i:iiiiii;;rr7r;;;;;;i
+        ri;i;i;:.  .,  .,:rBM0WBMWWWWBB@MM@BZ;;::::,i:i:iii::::::::,:,:,,,,,,,::i:i:iii:i:::i:i:ii;i;iii;;;;7r7rr;;;;;ii
+        i:i;i;i, .,:;i.,:ii2W@BW@W0WWM@M@BZaXiir;X;rrrri;;;;iiiiii::::,::i,:,::i:i::,::::iiiii:iiii;;r;r;;irrX77rr;r;;i;
+        ;:;iii;::::,:,iii;XX20WWM@WW@WW08Z2rX;;7i;::,,:,ii;;i,::i::iiiiii:i::.:::ii:i:i:ii;iii;;;i;;;;r;r;rrr77rrrr;;;ri
+        ;ii;;r;i.. ,.,:i;XSaaZ8BW@W@B00Z2aS;rr::ii:ri;:;;;i;ii:::i:i:iii:iii::,,,i:iii:iiii;;;;r;;;;i;i;i;r77X77rr;r;r;;
+        ;:;;;;;,. ..,.iirXSZZaZZ088Z0BBZZ2S2i7S;Z7rrrrrrr;;;;:iii:iiiii:::iii;;iii;i;iiiii;;r;;i;iiiii;;;;7rX7X7Xrrr7rri
+        ii;;i;i:...,..,iiXSZSa22SZS228Z00ZSXr7;;i;i;;;;;;;;r;iiii;i;;;i;iiiii;;;;iiii;irrr;;;iiiii::i;;rr777rX77r;;X77;;
+        ;:;i;i;::.. .:::ii7S8BMMMMMBB2a22Z27ar77;7rrXrrii;r;r77r;i;iii;iii;;r;;;;i;i;;;;;iiii:iiii;i;rr;rr7777XrrrX7777;
+        ;;;;i;ii...,::,:,..aWBBW@MMMMMMW@@ZS;;i;;r;i,i:::ii;r7r7r;i;i;;;;r;r;iii:ii;i;;;ii::,::i:iiiiii;i;r777r;ir77r7r;
+        7;7;;rri:.,.:,:,,..78B0808BBWW@@MMMWBXri:,:ii;XXZZ0BB8X;7r;i;ii;;;r;;:::;i;i;;;ii::,::i:::::ii;i;;7rr;rrrr7rrr;;
+        ..,:,::i,..:.,.,::::raa0BBBWBB0WWWWMMMMMa2WMMMMMMMBW827r;r;;;;;;;;;i:ii;iii;ii:i::,iiiiiiiiii;;r77r777r77X7r;rrr
+        ..,:,::i,..,,,.,:i:::i:;X8888W080B08BBWMMMMBWBBB8ZaSXXr;;i;;i;;r;i::iii;;;:::iii:i:iiiiiiiiii;;r;rr7XX7rr777;rrr;
+        .  . . . ,,,,:,,.,::::i7Xa22S2SSS2S22800ZaXSSSXX7SX7i;iiiii;;;;;;;iiiiiiiii;i;i;iiiii;i;;;rr;;;r77r7777X7XXX7Xrr
+        . ....... ,,:.,.,,i:i:iirXa2XXSSXrr;rXXXr;X7XXX77rriiiii;i;;;;;;;;;;iiii;i;i;iii;i;iiiii;;r;;;Xrr;rrXXX7X7XXXX7r
+        . .........,...,,::i:i::,irXX7rr7X;;;rr7;rr7r;i;iiiiiiii;;;r;;;;;;;;iii;ii:::iiiiii;iii;;r;;r77X77rr;rrXXXXS7X77
+        , ,.........:,::::i:ii::i,,ii:i:i;;i;;;i;iiiiii:ii;i;i;;;i;i;;;;rrr;;;;i;ii::i;iii;i;;rr7;;r7r77X77r7777XXSXX7Xr
+        . .,.. . ...,:,::::i:i:i::,,,iiii;ii:ii;i;ir;r;;;r;r;rrr;r;;ir;ri;;;;iii::::::i;i;iiirr7rrr7r77777r7XXXXXX7X777r
+        , ,.........,:,,,,:,i:::ii;:::ii;;r;;;rrr;;;;;r;rr7r7rr;r;r;r;riiiiiiiiii:iii:i:ii;;r;;;r;rrX7XrrrXXXXXSXXX7X7r;
+        . .,...... .,:::,::::i:::ii;iiiii;iiiiir;;;r;r;;;r;;;r;7r;;;;;;;i::i:i:ii;i;;;;;ii;;;;;r;7rrr7r77XSSXXXXXX77r7r7
+        : ,.,.,.....,,iii:i:::i:iiiiii;iiiiiii;rr;ii;r7;;;;;r;;;r;;;;iii;iii::::ii;i;;r;;;;;;;;;;r7r77X7XXSS2SSXXXX7X77r
+        ,.,,.,.,.,.,,:iiii:i:i:::iiii;i;i;i;iii;rri;i;;7;;;;;r;;;ri;i;:::::iiii;:iii;r;;ir;rr;i;;rrr;r7X7XXXXXXXXXrr;rrr
+        :.,.,.,.,.,,::iiiii:i:i:::ii;iii;;;;r;;;;r;;r;;;r;;;;;r;rrriiiii::i:;iii;i;;;iii;;rrr;7r7;;;r77XXXX7XXX77;;;777;
+        :.,,.,.,.,,,:::iiii;i;ii:i:ii;i;i;i;;;;;ir;;;r;;;r;;;rrr;rrriiiii;iii;i;;rr7;ii;i;;iiii;;rrr7X7X777XXX7ri;;7r;;i
+        ,.,,:,,.,.,,::::i:ii;i;;;iiiiiii;i;ii;;i;ir;;;;;7r;ir;rrr;;;r;;;ri;;i;r;;;ii;iii;i;i;i;;rr77XXX7XXXXX7r;rrr;;i;i
+        :.:,,,,:,,,,,i,i:::iiii;;;i;iiiiiii;iii;;;;;i;irrr;;;;;;ir;;;;rrr7r7rrrr;ri;i;i;rr;;;;;r;rr;;;;rr777rrr77r;;i;ii
+        :.::,,,,:,:,:,::i:i:iiii;i;;r;;iiiii;iiiiir;;;;;;;rr;;7;rrrrrr7rX77rri;i;iii;;X7r;;;;;;rr;;;r;rr7;;;;iiiiiii;iii
+        ,.::,,,,.,,:,::::::i:i:iiii;;rrr;;ir;;;;i;;rrr;r;;r7;;r777r7777X7rrr;;i;7;;r;;i;ii:i;rir;7rXXSSX;iiiiiii:ii;iiii
+        :.:,,,:::.,.:,:,::::::::i:ii;;rrXX77777rrr7X77XX77X7777r7r777rrr;;riii;;;;i:ii;i;;;i;i;;rr7;;;i:ii;;;;;i;;;iii;i
+        :,,,,:,:,,.,,,,,::,::iiiiiiiii;;r77X7X77777XXXXXXX7X7777rrr7r;;;iiiiiiiiii:iir;;i;;;i;i;;;;;:::iiiiiii:i:::i:i::
+        :.:::::::,,,,,:,::::::iiiiii;;ii;;rr7rr77r7rX7X7X7X7777;r;;iiiiii:ii;;7;i:;;;;;ii:;;riii;ii:::::i:i:i:::i:i:i:i:
+        :,::::::,,.,,,,,,::i:i:::ii;;;i;;;;;rr;7rr;ri;;rrr;;rr;r;iiii;ii:iirr7r;i;;;;i:iiii;iiiiii:iii:i:::iiiiiiiiii;ii
+        i,::::::,...,,,.,,:,::i:iii:ii;;r;r;;;rr7r777r7r;;;;;;;;i:::;i;i;;;;;iii;;rii:iiiii:::i:::iii,::::i::,:,i:i:i::,
+        :,:::i:i,,.,.,.,,::::::iiii;i;;;rr;;;;;r;r7Xrr77rrr7;;;rr7;;i;ii;;ii:iiii;i;;X7;iiiiii::ii::,::iii:i:::i::,,:::i
+        i,::::i:i:,.,,,,:,:::,::i:ii;;;i;;r;r;;;r;rrr;;;r;;;ri;;r;riii;ii:i:i:iiiii:ir7rr;iii:iii:::::;ii:ii;ii:i::,::i:
+        :,:i:::i::,,.,,,,:::,::i:ii;i;i;i;r7r;;;;r;;;;;r;;iii;i::iiii;;r;;;;i;;;iiiii:ii:iiii;:::i:::ii;:i;;i;ii:iiii;ii
+        ;:i:iiiii,:,:,:,:::,::iii:ii;i;iii;;7r7rrrr;;rr;;r7r;;;i;iii;iri;;;i;;;i;ii:;ii:,,;XX;riiiiiiii:::i:i,::ii;:iiii
+        i:iiiiii::,::::::::i:iii:::iiii;i;;rr77r;rr7r7r7;ii;ir;;ii;;i;iii;i;r7;;ii:;r;i;i;7Xrr;;ii,:::,,:::::::::::i:iii
+        ;:i:i:,,,,:,::::::i:i:iii:ii;i;i;;rr7r;;r;rrX77rr;;;;iiir;r;;irrii;iiii::iii:,:::i:.,,iiiii,,:::i::,::::,,i:ii;i
+        i..,.      . . ..,,,,:,:::,::iiiii;;;i:i:i:ii;;ii;;i:i:iiii;;i:;:::i,:i;i;i:.:::.,.,,:,,:,,,.,.,,:,:,:,:::,,,::i
+		-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Page title -->
+<title>GRS Redstone Server</title>
+<!-- /Page title -->
+
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- /Meta -->
+
+<!-- SEO Meta -->
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- /SEO Meta -->
+
+<!-- OpenGraph meta -->
+<meta property="og:image" content="icon-180x180.png">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<!-- /OpenGraph meta -->
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<!-- /Favicon -->
+
+<!-- Styles -->
+<link rel="stylesheet" href="assets/components/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/components/bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="assets/components/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/components/elegant-font/style.css">
+<link rel="stylesheet" href="assets/components/owl-carousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/components/owl-carousel/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="assets/components/sweetalert/sweetalert.css">
+<link rel="stylesheet" href="assets/components/iconfont/css/iconfont.css">
+<link rel="stylesheet" href="assets/css/magnific-popup.css">
+<link rel="stylesheet" href="assets/css/theme.css" title="theme-default">
+<!-- /Styles -->
+
+<!-- Predefined Schemes -->
+<link rel="alternate stylesheet" href="assets/css/theme-dulllavender-light.css" title="theme-dulllavender-light">
+<link rel="alternate stylesheet" href="assets/css/theme-dulllavender.css"       title="theme-dulllavender">
+<link rel="alternate stylesheet" href="assets/css/theme-dulllavender-dark.css"  title="theme-dulllavender-dark">
+<link rel="alternate stylesheet" href="assets/css/theme-nepal-light.css"        title="theme-nepal-light">
+<link rel="alternate stylesheet" href="assets/css/theme-nepal.css"              title="theme-nepal">
+<link rel="alternate stylesheet" href="assets/css/theme-nepal-dark.css"         title="theme-nepal-dark">
+<link rel="alternate stylesheet" href="assets/css/theme-tradewind-light.css"    title="theme-tradewind-light">
+<link rel="alternate stylesheet" href="assets/css/theme-tradewind.css"          title="theme-tradewind">
+<link rel="alternate stylesheet" href="assets/css/theme-tradewind-dark.css"     title="theme-tradewind-dark">
+<link rel="alternate stylesheet" href="assets/css/theme-tanhide-light.css"      title="theme-tanhide-light">
+<link rel="alternate stylesheet" href="assets/css/theme-tanhide.css"            title="theme-tanhide">
+<link rel="alternate stylesheet" href="assets/css/theme-tanhide-dark.css"       title="theme-tanhide-dark">
+<link rel="alternate stylesheet" href="assets/css/theme-burntsienna-light.css"  title="theme-burntsienna-light">
+<link rel="alternate stylesheet" href="assets/css/theme-burntsienna.css"        title="theme-burntsienna">
+<link rel="alternate stylesheet" href="assets/css/theme-burntsienna-dark.css"   title="theme-burntsienna-dark">
+<!-- /Predefined Schemes -->
+
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader" class="preloader">
+<div class="loader">加载中</div>
+</div>
+<!-- /PRELOADER -->
+
+<main class="main-container">
+
+<section id="home" class="section hero">
+
+	<div class="owl-carousel owl-theme owl-navigation owl-autoplay owl-no-mousedrag owl-reveal"
+		 data-owl-autoplay-timeout="6500"
+		 data-owl-items="1"
+		 data-owl-animate-in="heroCarouselIn"
+		 data-owl-animate-out="heroCarouselOut">
+
+		<div class="slide fullscreen bg-cover mask mask-black"
+			 style="background-image: url(assets/images/tis/1.jpg)">
+
+			<div class="vertical-middle mask-after">
+				<div class="container">
+
+					<div class="row hero-heading">
+						<div class="col-xs-12 text-center">
+
+							<div class="hero-title text-white reveal"
+								 data-reveal-distance="-30px"
+								 data-reveal-duration="500"
+								 data-reveal-reset="1">
+
+								GRS
+							</div>
+
+							<div class="hero-subtitle text-white reveal"
+								 data-reveal-distance="30px"
+								 data-reveal-duration="800"
+								 data-reveal-delay="150"
+								 data-reveal-reset="1">
+
+								一个默默无名的小红石生电服
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row reveal"
+						 data-reveal-duration="800"
+						 data-reveal-delay="350"
+						 data-reveal-reset="1">
+
+						<div class="col-xs-6 text-right">
+							<a href="http://127.0.0.1:8000" class="btn btn-lg btn-squared btn-base text-uppercase">进入GRS公告栏</a>
+						</div>
+						<div class="col-xs-6">
+							<a href="https://map.tis.world" class="btn btn-lg btn-squared btn-base text-uppercase">GRS的卫星地图</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="slide fullscreen bg-cover mask mask-black"
+			 style="background-image: url(assets/images/tis/2.jpg)">
+
+			<div class="vertical-middle mask-after">
+				<div class="container">
+
+					<div class="row hero-heading">
+						<div class="col-xs-12 text-center">
+
+							<div class="hero-title text-white reveal"
+								 data-reveal-origin="left"
+								 data-reveal-distance="-30px"
+								 data-reveal-duration="500"
+								 data-reveal-reset="1">
+
+								GRS
+
+							</div>
+
+							<div class="hero-subtitle text-white reveal"
+								 data-reveal-origin="right"
+								 data-reveal-distance="30px"
+								 data-reveal-duration="800"
+								 data-reveal-delay="150"
+								 data-reveal-reset="1">
+
+								一个默默无名的小红石生电服
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row reveal"
+						 data-reveal-duration="800"
+						 data-reveal-delay="350"
+						 data-reveal-reset="1">
+
+ 				<div class="col-xs-6 text-right">
+							<a href="http://127.0.0.1:8000" class="btn btn-lg btn-squared btn-base text-uppercase">进入GRS公告栏</a>
+						</div>
+						<div class="col-xs-6">
+							<a href="https://map.tis.world" class="btn btn-lg btn-squared btn-base text-uppercase">GRS的卫星地图</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="slide fullscreen bg-cover mask mask-black"
+			 style="background-image: url(assets/images/tis/3.jpg)">
+
+			<div class="vertical-middle mask-after">
+				<div class="container">
+
+					<div class="row hero-heading">
+						<div class="col-xs-12 text-center">
+
+							<div class="hero-title text-white reveal"
+								 data-reveal-scale="1.5"
+								 data-reveal-duration="500"
+								 data-reveal-reset="1">
+
+								GRS
+
+							</div>
+
+							<div class="hero-subtitle text-white reveal"
+								 data-reveal-distance="30px"
+								 data-reveal-duration="800"
+								 data-reveal-delay="150"
+								 data-reveal-reset="1">
+
+								一个默默无名的小红石生电服
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row reveal"
+						 data-reveal-duration="800"
+						 data-reveal-delay="350"
+						 data-reveal-reset="1">
+
+ 				<div class="col-xs-6 text-right">
+							<a href="http://127.0.0.1:8000" class="btn btn-lg btn-squared btn-base text-uppercase">进入GRS公告栏</a>
+						</div>
+						<div class="col-xs-6">
+							<a href="https://map.tis.world" class="btn btn-lg btn-squared btn-base text-uppercase">GRS的卫星地图</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+<section id="features" class="section">
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-xs-12 col-sm-4 icon-box reveal"
+				 data-reveal-duration="400">
+
+				<span class="icon icon_lightbulb_alt"></span>
+				<div class="title text-dark">高视距</div>
+				<div class="description">
+					我们保证全服视距为10, 不会出现减小视距的情况
+				</div>
+
+			</div>
+
+			<div class="col-xs-12 col-sm-4 icon-box reveal"
+				 data-reveal-duration="400"
+				 data-reveal-delay="200">
+
+				<span class="icon icon_desktop"></span>
+				<div class="title text-dark">版本稳定</div>
+				<div class="description">
+					GRS版本为 1.13.2  暂时没有需要更新
+				</div>
+
+			</div>
+
+			<div class="col-xs-12 col-sm-4 icon-box reveal"
+				 data-reveal-duration="400"
+				 data-reveal-delay="400">
+
+				<span class="icon icon_heart_alt"></span>
+				<div class="title text-dark">高配置服务器</div>
+				<div class="description">
+					服主采用5.2Ghz高频CPU, 16G DDR4内存, 尽可能的优化地毯端的菜鸡性能
+					</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+<section id="video" class="section text-white bg-center-top bg-fixed mask mask-black xs-text-center"
+		 style="background-image: url(assets/images/tis/100d.png)">
+	<div class="container mask-after">
+
+		<div class="row">
+
+			<div class="col-xs-12 col-sm-8 col-md-5 xs-mb reveal"
+				 data-reveal-duration="700"
+				 data-reveal-distance="30px">
+
+				<div class="h2 text-center pt no-margin text-white">观看我们的宣传片(未开放)</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-4 col-md-2 xs-mb reveal"
+				 data-reveal-duration="700"
+				 data-reveal-delay="400"
+				 data-reveal-scale="1.00"
+				 data-reveal-distance="0">
+
+				<a href="111" class="block link-white text-center mt-0p5"  target="view_window"><i class="icon icon-inline icon-4x fa fa-fw fa-play-circle-o"></i></a>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-5 reveal"
+				 data-reveal-duration="700"
+				 data-reveal-distance="-30px">
+
+				<p class="mt">
+					欢迎加入我们！
+				</p>
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+<section id="links" class="section bg-center-top bg-fixed mask mask-black text-white"
+		 style="background-image: url(assets/images/tis/desc.jpg)">
+	<div class="container mask-after">
+		<div class="row">
+
+			<div class="col-xs-12 col-sm-6 col-md-3">
+
+				<div class="icon-box-squared reveal">
+
+					<a href="https://jq.qq.com/?_wv=1027&k=HNVSRokg" target="view_window"><i class="icon iconfont icon-QQ"></i></a>
+					<div class="title">我们的QQ审核群</div>
+					<div class="text">
+						你可以在这里下载题目进行审核
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-3">
+
+				<div class="icon-box-squared reveal"
+				         data-reveal-delay="800">
+
+					<a href="https://space.bilibili.com/392055878/" target="view_window"><i class="icon iconfont icon-CN_bilibili"></i></a>
+					<div class="title">关注我们的B站官方帐号</div>
+					<div class="text">
+						第一时间看到服务器最新的动态
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- Powered by TIS -->
+<section id="TIS" class="section bg-center-top bg-cover text-white"
+		 style="background-image: url(assets/images/tis/logo_long.jpg)">
+	<div class="container mask-after">
+
+			<div class="hero-title text-uppercase">GRS Redstone Server</div>
+			<div class="section-subtitle">©2020 GRS</div>
+			<div class="section-subtitle">Template by TIS Trinity Union</div>
+
+	</div>
+</section>
+<!-- Powered by TIS -->
+
+</main>
+
+<!-- SCRIPTS -->
+<script src="assets/js/jquery-2.2.0.min.js"></script>
+<script src="assets/components/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/components/owl-carousel/owl.carousel.min.js"></script>
+<script src="assets/components/sweetalert/sweetalert.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.stellar.min.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.animateNumber.min.js"></script>
+<script src="assets/js/circle-progress.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/masonry.pkgd.min.js"></script>
+<script src="assets/js/scrollreveal.js"></script>
+<script src="assets/js/general.js"></script>
+<!-- /SCRIPTS -->
+
+</body>
+</html>
